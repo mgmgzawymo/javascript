@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+// သစ်သီးဝယ်ယူခြင်း ကိုတွက်ချက်ခြင်း
+           
+const fruits = {
+            apple : 50,
+            orange : 40,
+            mango : 70, 
+            banana : 30
+          }
+
+          const results = []; //Array ထဲမှာ results အနေနှင့်သိမ်းထားခြင်း
+          let resultIndex = 0;// သစ်သီး ဝယ်ယူတဲ့ဈေးနှုန်း တစ်ခုချင်းစီ ကို Array ထဲမှာဖော်ပြပေးသည်
+          let total = 0;
+
+        //   function calculateCost(fruitsName,quantity){  //fruitsName ထည့်တဲ့အခါ datatype ကိုကြည့်ပြီးထည့်ရပါမည်
+
+        //     return fruits[fruitsName] * quantity; // သစ်သီးနာမည်နှင့် အရေအတွက်ကိုထည့်ပြီး ဝယ်ယူလို့ရပါပြီ
+
+        //   }
+
+        function calculateTax(amount,taxPercentage=0.05){
+
+            return amount * taxPercentage;
+        }
+
+
+        function calculateCost(fruitName,quantity){  //fruitsName ထည့်တဲ့အခါ datatype ကိုကြည့်ပြီးထည့်ရပါမည်
+            let cost = fruits[fruitName] * quantity;
+            total += cost;
+
+            let result = {};
+            result.fruit = fruitName;
+            result.price = fruits[fruitName];
+            result.quantity = quantity;
+            result.cost = cost;
+            
+            results[resultIndex] = result; //Array ထဲမှာသိမ်းထားခြင်းအတွက်
+            resultIndex++;
+
+
+        return result; // သစ်သီးနာမည်နှင့် အရေအတွက်ကိုထည့်ပြီး ဝယ်ယူလို့ရပါပြီ
+
+}
+calculateCost("apple",5)
+calculateCost("orange",5)
+calculateCost("mango",5)     
+calculateCost("banana",5)
+
+console.table(results)
+console.table({  
+    total : total,
+    tax : calculateTax(total),
+    netTotal :total + calculateTax(total)
+
+})
+
+
+    </script>
+</body>
+</html>

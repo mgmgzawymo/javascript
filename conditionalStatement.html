@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* not member =full price
+normalMember = 5% discount
+silverMember = 10% discount
+goldMember = 15% discount
+platinumMember = 20% discount
+ */
+
+const originalPrice = 100;
+let totalPrice = 0;
+let memberType = "normalMember";
+
+if (memberType === "normalMember"){
+   totalPrice += 100 * 0.95;
+} else if(memberType === "silverMember") {
+   totalPrice += 100 * 0.9;
+} else if(memberType === "goldMember") {
+    totalPrice += 100 * 0.85;
+} else if(memberType === "platinumMember") {
+    totalPrice += 100 * 0.8;
+}else  {
+    totalPrice = originalPrice;
+}
+
+
+
+{
+    if(false){   // condi က true ဆိုရင် အလုပ် လုပ်ပြီး  false ဆိုရင် အလုပ်မလုပ်ပါ
+        console.log("one");
+        console.log("two");
+        console.log("tree");
+    }
+    else{  
+        console.log("apple");
+        console.log("orange");
+        console.log("mango");
+    }
+
+    let iceCreamPrice = 300;
+    let pocketMoney = 30;
+
+    if(pocketMoney > iceCreamPrice){
+        console.log(" you can buy iceCream")
+    }
+    else if(pocketMoney >= iceCreamPrice){
+        console.log("စားချင်ကေစားနိုင်ရေ")
+    }
+    else {
+        console.log("ငတ်ယာ")
+    }
+
+}
+
+
+// စာသင်ချိန် အချိန်ဇယား
+
+let classTime = 7;
+let currentTime = 12;
+
+if(currentTime < 7){
+    console.log("waiting")
+}
+else if(currentTime >= 7 && currentTime < 9){
+    console.log("class start")
+}
+else if(currentTime >= 9){  // else နောက်တွင် operators တွေထည့်လို့မရတော့ပါ
+    console.log("class ended")
+}
+
+
+
+// အောင်စာရင်း
+
+let mark = 82;
+
+if(mark >= 80){
+    console.log("distation(ဂုဏ်ထူး)")
+}
+else if(mark >= 40){
+    console.log("passed")
+}
+else if(mark < 40){
+    console.log("fail")
+}
+
+//function နှင့်တွဲသုံးခြင်း
+
+// function checkResult(mark){
+//     if(mark >= 80){
+//     console.log("distation(ဂုဏ်ထူး)")
+// }
+// else if(mark >= 40){
+//     console.log("passed")
+// }
+// else if(mark < 40){
+//     console.log("fail")
+// }
+// }
+// checkResult(30);
+// checkResult(40);
+// checkResult(79);
+// checkResult(8);
+
+
+function checkResult(mark){ //ဒီလိုလည်း သုံးလို့ရပါသည်
+    let result;
+    if(mark >= 80){
+    result ="distation(ဂုဏ်ထူး)";
+}
+else if(mark >= 40){
+    result ="passed";
+}
+else if(mark < 40){
+    result ="fail";
+}
+return result;
+}
+
+function run(x){  // ဒီလိုလည်းရပါသေးတယ်
+    if(x < 10){
+        return "good" //return ပြန်လိုက်လို့ရှိရင် return အောက်ကဟာတွေမစဉ်းစားတော့ပါဘူး
+    }else{
+        return "bad"
+    }
+}
+
+
+// အိပ်ရာထချိန်
+ function chack(wakeUpTime,currentTime){
+    if(wakeUpTime > currentTime){
+        console.log("ကျောင်းနောက်ကျမည်")
+    }else{
+        console.log("ကျောင်းနောက်မကျပါ")
+    }
+ }
+
+chack()
+
+// ကျောင်းတက်ခြင်း အခြေအနေ
+
+function zaw(pocketMoney){
+    if(pocketMoney >= 200){
+        console.log("အသွားမှာကားစီးလို့ရပြီ");
+        pocketMoney -= 200;
+    }else{
+        console.log("အသွားမှာ လမ်းလျှောက်သွား");
+    }
+
+    if(pocketMoney >= 600){
+        console.log("အအေးသောက်မယ်");
+        pocketMoney -= 400;
+    }
+
+    console.log("စာသင်မယ်");
+
+    if(pocketMoney >= 200){
+        console.log("အပြန်မှာ ကားစီးလို့ရပြီ");
+        pocketMoney -= 200;
+    }else{
+        console.log("အပြန်မှာ လမ်းလျှောက်သွား");
+    }
+    
+    return pocketMoney;
+
+}
+
+
+// logic operator
+
+let writing = 50;
+let viber = 60;
+
+if(writing >= 50 && viber >=60){
+    console.log("passed");
+}else{
+    console.log("fail")
+}
+
+let bus = 65;
+
+if(bus === 65 || bus === 20){
+    console.log("သင်တန်းကိုရောက်မည်")
+}else{
+    console.log("သင်တန်းကိုမရောက်နိုင်ပါ")
+}
+    </script>
+</body>
+</html>

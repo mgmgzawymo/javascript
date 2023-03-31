@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // block scope ( အပြင်ကခေါ်သုံးလို့မရတော့ပါ)
+
+        {
+            let x = 5;
+            console.log(x);
+        }
+        //console.log(x); //အပြင်ကခေါ်သုံးရင် အလုပ်မလုပ်ပါ block scope ထဲမှာပိတ်မိသွားလို့ပါ
+
+
+        // function scope က function ထဲမှာပဲခေါ်သုံးမှ ရပါတယ် တခြားနေရာကခေါ်သုံးလို့မရပါ
+
+        function run(){
+            let a = 15;
+            console.log(a);
+        }
+        
+        run()
+
+
+        // Global scope က ဘယ်နေရာကခေါ်သုံးသုံးရပါတယ် (တန်ဖိုးတွေလည်း ပြောင်းလို့ရပါသေးတယ်)
+
+        let y = 10;
+
+        {
+            
+            console.log(y);
+        }
+
+        
+
+        function zaw(){
+            console.log(y);
+        }
+        
+        zaw()
+
+        console.log(y);
+
+
+    </script>
+</body>
+</html>

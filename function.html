@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function statement
+        function zaw() {
+            console.log("one");
+            console.log("two");
+            console.log("three");
+        }
+        zaw()
+        //zaw() လို့ခေါ်လိုက်ကေ function ထဲကစာတိအားလုံးအလုပ်လုပ်ပီး
+             //ဇာနှစ်ကြိမ်ခေါ်ခေါ် အလုပ် လုပ်ပီး
+
+             function zaw() {
+            console.log("one");
+            console.log("two");
+            console.log("three");
+
+            return "this is run function" //return ပြီးသွားတာနဲ့ run တာပြီးသွားပြီ အောက်မှာရှိနေလည်းဆက်မ run တော့ပါ
+        }
+        zaw()
+
+       //Parameter in function (x နှင့် y နေရာတွင်အစားထိုးအသုံးပြုနိုင်သည်)
+        function add(x,y) {
+
+           return x+y;
+
+        }
+
+
+        // Area ရှာဖွေခြင်း
+
+            //  function area(width,breadth){
+            //     return (width * breadth)+"sqFt"
+            //  } 
+
+            function area(w,b){
+            //   let obj ={
+            //      width : w+"ft",
+            //      breadth : b+"ft",
+            //      area : w * b + " sqft"
+                 
+            //   }
+              let result = {};
+              result.width = w+ "ft";
+              result.breadth = b + "ft";
+              result.area = w * b + " sqft";
+              return result;
+             } 
+             console.log(area(40,20));
+
+
+
+             //USD to MMK (ပြောင်းခြင်း)
+             //Exchange rate ( 1 USD = 3000 MMK)
+              
+             function toMMK(amount,rate){
+                return amount * rate;
+
+             }
+
+
+              // MMK to USD (ပြောင်းခြင်း)
+             //Exchange rate ( 1 USD = 3000 MMK)
+              
+             function fromMMK(amount,rate){
+                return amount * (1/rate);
+
+             }
+
+             //KRW to MMK (ပြောင်းခြင်း)
+             // exchange rate ( 1 USD = 1350 KRW)
+             // exchange rate ( 1 USD = 3000MMK ငွေဈေးပြောင်းလဲနိုင်)
+
+             function toMyanmar(KRW,rate){
+                 return (KRW * rate)/1350;
+
+             }  
+
+
+             // MMK to KRW  (ပြောင်းခြင်း)
+             // exchange rate ( 1 USD = 1350 KRW)
+             // exchange rate ( 1 USD = 3000MMK ငွေဈေးပြောင်းလဲနိုင်)
+
+             function toKRW(MMK,rate){
+                 return (MMK / rate)*1350;
+
+                }
+
+
+            // Function expression 
+            
+            let findRactArea = function(w,b){
+
+                return w * b;
+
+            }
+            console.log(findRactArea (20,5));
+
+
+
+            //IIFE function 
+
+            (function(){
+                console.log("i'm iife")  // console.log ကိုအထဲမှာ ခေါ်သုံးလည်း invoke မလုပ်ဘဲ တစ်ခါတည်း run ပေးတယ်
+                                         // တခြား function တွေက အထဲမှာခေါ်သုံးရင် အလုပ်(run)မလုပ်ပေးဘူး ခေါ်ပေးမှ အလုပ်လုပ်တယ်
+            })()
+             
+                    // any currency to any currency 
+                    // 300USD to SGD ?
+                    //200SGD to MMK ?
+                    // 400SGD to EUR ?
+                    // 1USD = 1850MMK, 1SGD = 1330MMK, 1EUR = 1920MMK
+
+                    // USD to MMK to SGD
+
+                    // function တစ်ခုထဲတွင် တခြား function တွေကိုခေါ်သုံးလို့ရသည်
+
+                    function toany(amount,from,to){
+                        let mmk = toMMK(amount,from);
+                        return fromMMK(mmk,to)
+                    }
+
+                    console.log(toany(300,1850,1330));
+                    console.log(toany(200,1330,1));
+                    console.log(toany(400,1330,1920));
+           
+             
+        
+     
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

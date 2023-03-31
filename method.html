@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {         //obj ထဲမှာထည့်သိမ်းထားတဲ့ တစ်ခုစီတိုင်းကို Propety လို့ခေါ်တယ်
+            name : "zaw myo",
+            age : 30,
+            job : "web Developer",
+
+            // ES 5 ပုံစံ
+            teach : function(){    // obj ထဲမှာ function ကို ဒီလိုပုံစံရေးတာကို  method လို့ခေါ်တယ်
+                return "I can teach JavaScript"
+            },
+
+            // ES 6 ပုံစံ
+            learn(){
+                return "I can learn something"
+            },
+
+            aa(x){
+                return "I like" +x;
+            },
+
+            x(){
+                console.log(this.age); //this ကလက်ရှိ run နေတဲ့ obj တစ်ခုလုံးကို ကိုယ်စားပြုတယ်။ ခေါ်ချင်တဲ့ ဟာကိုနာမည်ထည့်ပြီးခေါ်လည်းရပါတယ်
+                return "I'm x"
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for loop တူညီတဲ့အကြောင်းအရာကိုပဲထပ်ခါထပ်ခါ ထုတ်ချင်တယ်ဆိုရင် ဒါကိုသုံးပါတယ်
+        for(let i=1; i<= 5; i++){
+            console.log("I'm loop"+ i);
+        }
+
+
+        // ၁ ကနေ ၅အထိ ပေါင်းဘယ်လောက်ရမလဲ
+
+        let result = 0;
+        
+        for(let i=1; i<=50; i++){
+            result +=i;
+            console.log(i);
+
+        }
+        console.log("answer is =>" +result)
+
+
+        // 1ကနေ မဂဏန်းတွေပဲပြမယ်
+
+        for(let i=1; i<=10; i+=2){
+            
+            console.log(i);
+        }
+
+
+        // loop ပတ်နေတာကို ကိုယ်ရပ်ချင်တဲ့နေရာမှာ ရပ်လို့ရပါတယ်
+
+        for(let i=1; i<=10; i++){
+            
+            console.log(i);
+
+            if(i==7){break}  //ဒီလို break ကိုထည့်ပေးလိုက်ရင် ရပ်လို့ရပါတယ်
+        }
+
+        // ကို မထည့်စေချင်တဲ့ ဂဏန်းကိုလည်း ဖြုတ်ထားလို့ရပါတယ်
+
+        for(let i=1; i<=10; i++){
+            
+            if(i==7 || i==3){continue}  // ကိုထည့်ပြီး ကျော်သွာလို့ရပါတယ်
+            console.log("I'm " +i);
+        }
+        console.log(i);  // block scope ထဲမှာဆိုရင် အပြင်ကခေါ်သုံးလို့မရပါ (var   ဆိုရင်တော့ ခေါ်သုံးလို့ရပါတယ်)
+
+
+
+        //array မှာ loop ကို သုံးခြင်း
+
+        let fruits = ["apple","orange","mango","babana","grabe"];
+
+        for(let i=0; i<fruits.length;i++){
+            console.log("for loop",i, fruits[i]);
+        }
+
+
+        // for of က array ထဲက value ကိုပဲဖော်ပြပါတယ်
+
+        for(x of fruits){
+            console.log("for of",x);
+        }
+
+
+        // for in က index number ကိုပဲဖော်ပြပါတယ်
+
+        for(x in fruits){
+            if(x == 3) continue
+            console.log(" for in",x,fruits[x],typeof x)
+        }
+
+
+
+        // obj ကို loop ပတ်ခြင်း (for in နှင့်ပဲရပါသည်)
+
+        let mySelf = {
+
+        name : "zaw myo",  
+        age : 30,
+        township : "Mrauk-U",
+        job : "web developer"
+        
+        };     
+        
+        for(x in mySelf){
+            console.log("for in ",x,mySelf[x])
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let arr = ["apple","orange",true,5]; //tyoeof နှင့်အမျိုးအစားကိုစစ်လို့ရသည်
+
+        console.log(arr)
+
+
+        let x;
+        x = [];  // Array ကို ဒီနည်းနှင့် တည်ဆောက်လို့လည်းရပါသည်
+        x[0] = "a";
+        x[1] = "b";
+        x[2] = "c";
+        console.log(x)
+
+
+        //မောင်မောင်ကျောင်းသွားခြင်း
+
+        let mgmgBag = [
+            "MM Book",
+            "Eng Book",
+            "Bio Book"
+
+        ]
+        
+        let mgmgPen = null;
+
+        let mgmgPenCount = 0;
+        
+        let canMgMgFrendSmoke = true;
+        let canMgMgSmoke = false;
+
+        let mgmgInnfo = {   //Object ဖြစ်သည်
+              name : "Mg Mg",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453190"
+        }
+
+        let zawzawInnfo = {   //Object ဖြစ်သည်
+              name : "Zaw Zaw",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453192"
+        }
+
+        let mamaInnfo = {   //Object ဖြစ်သည်
+              name : "Ma Ma",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453191"
+        }
+
+        // Arrary ထဲတွင် Object တွေကိုလည်းအများကြီးသိမ်းထားနိုင်သည်
+        let Students = [
+        {   //Object ဖြစ်သည်
+              name : "Mg Mg",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453190"
+        },
+
+        {   //Object ဖြစ်သည်
+              name : "Zaw Zaw",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453192"
+        },
+
+        {   //Object ဖြစ်သည်
+              name : "Ma Ma",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453191"
+        }
+
+
+        ];
+
+        Students[3] = {  // object နှင့် array မှာ overwrite ရေးပြီးဖြည့်လို့ရပါတယ် 
+            name : "Su Su",
+              age : 15,
+              grade : 11,
+              liveIn : "Mrauk-U",
+              ph : "09250453193"
+        }
+        console.table(Students)
+
+
+
+      
+
+    </script>
+</body>
+</html>
